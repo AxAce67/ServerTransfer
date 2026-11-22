@@ -1,17 +1,26 @@
 name: ServerTransfer
-version: 1.0
-main: me.aki.serverTransfer.ServerTransfer
-api-version: '1.20'
-prefix: "[ST]"
+version: '${version}'
+main: sh.aki.servertransfer.ServerTransferPlugin
+api-version: '1.20.5'
+description: Server selector menu that moves players to other servers with the transfer packet.
+authors: [AxAce67]
+website: https://github.com/AxAce67/ServerTransfer
+
 commands:
   st:
-    description: Open the Server Selector GUI
-    aliases: [servertransfer, setting]
+    description: Open the server menu, or transfer to a server
+    usage: /st [server|help]
+    aliases: [servertransfer]
 
 permissions:
   servertransfer.use:
-    description: Allows players to use the server selector.
+    description: Open the menu, list servers and transfer.
     default: true
+  servertransfer.bypass:
+    description: No countdown and no cooldown.
+    default: false
   servertransfer.admin:
-    description: Allows use of reload and setting commands.
+    description: Send players, add, remove and arrange servers, reload.
     default: op
+    children:
+      servertransfer.use: true

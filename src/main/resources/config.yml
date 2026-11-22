@@ -1,54 +1,61 @@
-# ==========================================
-# ServerTransfer - Configuration
-# ==========================================
+# ServerTransfer configuration
+# Text supports MiniMessage (<green>, <bold>, <#55ffff>, ...) and legacy & colour codes.
+# Changes take effect after /st reload.
 
-# Default language for chat messages: en (English) / ja (Japanese)
-language: en
+config-version: 2
 
-# Title of the selection GUI (Supports color codes with &)
-gui-title: "&1Server Selector"
+# Message language: auto (each player's game language), en, ja
+language: auto
 
-# Initial size of the GUI (Must be 9, 18, 27, 36, 45, or 54)
-gui-size: 9
+menu:
+  title: "<dark_gray>Server Selector"
+  # Height of the menu, 1-6. It grows automatically when a server's slot does not fit.
+  rows: 1
+  # Item for empty slots, e.g. GRAY_STAINED_GLASS_PANE. Leave empty for none.
+  filler: ""
+  # Show whether each server is online, and how many players it has.
+  show-status: true
+  show-players: true
 
-# ------------------------------------------
-# Advanced Features
-# ------------------------------------------
+status:
+  # How long a ping result is reused.
+  refresh-seconds: 5
+  timeout-ms: 1500
 
-# Enable/Disable server status (Online/Offline) check
-show-status: true
+transfer:
+  # Countdown before the transfer, 0 to transfer immediately.
+  countdown-seconds: 3
+  cancel-on-move: true
+  cancel-on-damage: true
+  # Ping the target first and refuse to transfer if it does not answer.
+  check-online: true
+  # Minimum time between two transfers of the same player.
+  cooldown-seconds: 3
 
-# Enable/Disable real-time player count display (e.g., 15/100)
-show-player-count: true
+# An item in the hotbar that opens the menu.
+join-item:
+  enabled: false
+  material: COMPASS
+  # Hotbar slot, 0-8
+  slot: 8
+  name: "<aqua><bold>Server Menu</bold> <gray>(Right click)"
+  lore: []
+  # Players cannot drop or move it, and do not lose it on death.
+  locked: true
 
-# Time in seconds for teleport countdown (0 to disable)
-# Players will be cancelled if they move during this time.
-countdown-time: 3
-
-# Text displayed above the status in the item lore
-status-separator: "&7----------------"
-
-# ------------------------------------------
-# Join Item Settings
-# ------------------------------------------
-
-# If true, gives an item to players when they join the server
-give-join-item: false
-
-# Material for the join item
-join-item-material: "COMPASS"
-
-# Slot to place the item (0-8)
-join-item-slot: 8
-
-# Display name of the join item
-join-item-name: "&b&lServer Menu &7(Right Click)"
-
-# ------------------------------------------
-# Servers List (Editable via /st setting)
-# ------------------------------------------
-# Each server entry requires:
-# - address: "hostname" or "hostname:port"
-# - permission: (Optional) Permission required to see/use this server
-# - lore: List of descriptions
+# Target servers must set accepts-transfers=true in server.properties.
+#
+# servers:
+#   lobby:
+#     address: "lobby.example.com"     # host or host:port
+#     name: "<green>Lobby"
+#     icon: GRASS_BLOCK
+#     slot: 0                          # optional, the next free slot is used otherwise
+#     lore:
+#       - "<gray>Players: {online}/{max}"
+#       - "<yellow>Click to join"
+#     permission: ""                   # optional; players without it do not see the server
+#
+# Placeholders in name and lore: {online} {max} {ping}
+# Servers can also be added in game with /st add and arranged with /st edit.
 servers: {}
