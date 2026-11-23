@@ -5,7 +5,7 @@ All notable changes to this project are documented here. Versions follow
 
 ## Unreleased
 
-## 2.0.0
+## 2.0.0 - 2026-11-23
 
 A rewrite. The 1.x config is converted automatically and kept as `config-1.x.yml`.
 
