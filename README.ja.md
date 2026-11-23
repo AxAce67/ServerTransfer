@@ -1,6 +1,17 @@
+<div align="center">
+
+<img src=".github/icon.png" width="96" height="96" alt="">
+
 # ServerTransfer
 
+メニューから別のサーバーへ移動できる Minecraft プラグイン（プロキシ不要）
+
+[![build](https://img.shields.io/github/actions/workflow/status/AxAce67/ServerTransfer/ci.yml?branch=main&label=build)](https://github.com/AxAce67/ServerTransfer/actions/workflows/ci.yml) [![release](https://img.shields.io/github/v/release/AxAce67/ServerTransfer?include_prereleases&label=release)](https://github.com/AxAce67/ServerTransfer/releases) [![Modrinth](https://img.shields.io/modrinth/dt/servertransfer?logo=modrinth&label=Modrinth&color=00AF5C)](https://modrinth.com/plugin/servertransfer) [![license](https://img.shields.io/github/license/AxAce67/ServerTransfer)](LICENSE)<br>
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.5%E2%80%9326.3-62B47A) ![server](https://img.shields.io/badge/server-Paper%20%7C%20Purpur-1E88E5) ![Java](https://img.shields.io/badge/Java-21%2B-E76F00)
+
 [English](README.md) | **日本語**
+
+</div>
 
 ダウンロード: [Modrinth](https://modrinth.com/plugin/servertransfer) · [GitHub Releases](https://github.com/AxAce67/ServerTransfer/releases)
 
