@@ -1,9 +1,11 @@
 # ServerTransfer
 
-A server selector for Paper. Players pick a server from a menu and are moved there with Minecraft's
-transfer packet (1.20.5+), with no proxy needed.
+**English** | [日本語](README.ja.md)
 
-[日本語版 README](README.ja.md)
+Download: [Modrinth](https://modrinth.com/plugin/servertransfer) · [GitHub Releases](https://github.com/AxAce67/ServerTransfer/releases)
+
+A server selector plugin for Minecraft servers (Paper / Purpur). Players pick a server from a menu and are moved there with Minecraft's
+transfer packet (1.20.5+), with no proxy needed.
 
 - Menu with each server's online status, player count and ping
 - Countdown before the move, cancelled by moving or taking damage; cooldown between moves

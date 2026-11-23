@@ -1,9 +1,11 @@
 # ServerTransfer
 
-Paper 用のサーバー選択プラグインです。プレイヤーはメニューからサーバーを選び、Minecraft の転送機能
-（1.20.5 以降）で移動します。プロキシは必要ありません。
+[English](README.md) | **日本語**
 
-[English README](README.md)
+ダウンロード: [Modrinth](https://modrinth.com/plugin/servertransfer) · [GitHub Releases](https://github.com/AxAce67/ServerTransfer/releases)
+
+Minecraft サーバー（Paper / Purpur）用の、サーバー選択プラグインです。プレイヤーはメニューからサーバーを選び、Minecraft の転送機能
+（1.20.5 以降）で移動します。プロキシは必要ありません。
 
 - 各サーバーのオンライン状態・人数・応答時間をメニューに表示
 - 移動前のカウントダウン（動く・ダメージを受けるとキャンセル）と、連続移動の待ち時間
